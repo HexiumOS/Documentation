@@ -1,4 +1,7 @@
-# Syscall API for Hexium OS
+---
+title: Syscall API
+sidebar_position: 2
+---
 
 ## The basics
 
