@@ -1,5 +1,5 @@
 ---
-title: VFS – Virtual Filesystem Layer
+title: Virtual Filesystem Layer
 sidebar_position: 1
 ---
 

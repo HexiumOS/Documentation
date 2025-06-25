@@ -18,7 +18,7 @@ The syscall arguments will be passed in this order of registers:
 
 ## Syscalls
 
-| Name  | Number (`rax`) | Description                 | Arg 0<br>(`rdi`)           | Arg 1<br>(`rsi`)       | Arg 2<br>(`rdx`)    | Arg 3<br>(`r10`)   | Arg 4<br>(`r8`)   | Arg 5<br>(`r9`)       |
-|-------|----------------|-----------------------------|----------------------------|------------------------|---------------------|--------------------|-------------------|-----------------------|
-| Read  | 0              | Read from a file descriptor | unsigned int fd            | char *buf              | size_t count        |                    |                   |                       |
-| Write | 1              | Write to a file descriptor  | unsigned int fd            | const char *buf        | size_t count        |                    |                   |                       |
+| Name  | Number (`rax`) | Description                 | Arg 0<br />(`rdi`)           | Arg 1<br />(`rsi`)       | Arg 2<br />(`rdx`)    | Arg 3<br />(`r10`)   | Arg 4<br />(`r8`)   | Arg 5<br />(`r9`)       |
+|-------|----------------|-----------------------------|------------------------------|--------------------------|-----------------------|----------------------|---------------------|-------------------------|
+| Read  | 0              | Read from a file descriptor | unsigned int fd              | char *buf                | size_t count          |                      |                     |                         |
+| Write | 1              | Write to a file descriptor  | unsigned int fd              | const char *buf          | size_t count          |                      |                     |                         |

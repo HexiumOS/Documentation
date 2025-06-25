@@ -54,6 +54,6 @@ Only regular files and directories are supported. No symbolic links, special dev
 
 ## Usage & Limitations
 
-* **Read-only:**This filesystem does not support writing or modifying files.
+* **Read-only:** This filesystem does not support writing or modifying files.
 * **Early-boot only:** Ideal for systems before external storage drivers are initialized.
 * **Simple TAR support:** Assumes POSIX ustar format; no compression or complex features.
