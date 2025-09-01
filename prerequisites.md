@@ -1,6 +1,6 @@
 ---
 title: Prerequisites
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## Development Hardware
@@ -50,20 +50,3 @@ When running in a virtual environment:
 
 - Enable hardware virtualization (VT-x/AMD-V)
 - Allocate at least 128 MB RAM
-
-## Development Requirements
-
-### Required Software
-
-- Rust (nightly toolchain)
-- Cargo package manager
-- Rust `rust-src` component `for x86_64-unknown-none`
-- QEMU emulator
-- Git version control
-- GNU xorriso
-
-### Optional Tools
-
-- GDB debugger
-- Rust analyzer
-- VirtualBox (for alternative testing)

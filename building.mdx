@@ -1,0 +1,184 @@
+---
+title: Building
+sidebar_position: 1
+---
+
+## Platforms
+
+You should be able to compile Hexium successfully on the following platforms (older and newer versions might work):
+
+* Certain Linux distrobutions (Arch, Debian and Ubuntu are tested and works)
+* Windows 10 and 11 using WSL2
+
+## Get the source code
+
+You can get the entire source code by cloning the git repo recursively:
+
+```
+git clone --recursive https://github.com/HexiumOS/Hexium
+```
+
+To update an existing clone you can use the following commands:
+
+```
+git submodule update --init --recursive
+```
+
+## Dependencies
+
+To build Hexium you will need the following:
+
+- [Rust](https://www.rust-lang.org/) (nightly toolchain)
+- [Cargo](https://github.com/rust-lang/cargo) package manager
+- Rust `rust-src` component for `x86_64-unknown-none`
+- [QEMU](https://www.qemu.org/) emulator
+- [Git](https://git-scm.com/) version control
+- GNU [xorriso](https://www.gnu.org/software/xorriso/)
+- GNU [make](https://www.gnu.org/software/make/)
+
+<details>
+<summary>Downloading Dependecies</summary>
+
+### Rust and Cargo
+
+To download Rust on Linux or MacOS run the following command:
+
+```
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+
+Then you will need to install a linker:
+
+#### MacOS
+
+```
+xcode-select --install
+```
+
+#### Linux
+
+On linux you will typically need either GCC or Clang. For example on Ubuntu you can get it by installing the `build-essential` package and on Arch you will need to install the `base-devel` package
+
+### `rust-src` component
+
+On both Linux and MacOS you will need to run the following command:
+
+```
+rustup component add rust-src --toolchain nightly-2025-04-03-x86_64-unknown-linux-gnu
+```
+
+### QEMU
+
+#### MacOS
+
+```
+brew install qemu
+```
+
+#### Debian-based
+
+```
+sudo apt install qemu
+```
+
+#### Fedora
+
+```
+sudo dnf install qemu
+```
+
+#### Arch-based
+
+```
+sudo pacman -Syu qemu
+```
+
+### Git
+
+#### MacOS
+
+```
+brew install git
+```
+
+#### Debian-based
+
+```
+sudo apt install git
+```
+
+#### Fedora
+
+```
+sudo dnf install git
+```
+
+#### Arch-based
+
+```
+sudo pacman -Syu git
+```
+
+### GNU `xorriso`
+
+#### MacOS
+
+```
+brew install xorriso
+```
+
+#### Debian-based
+
+```
+sudo apt install xorisso
+```
+
+#### Fedora
+
+```
+sudo dnf install xorisso
+```
+
+#### Arch-based
+
+```
+sudo pacman -Syu xorisso
+```
+
+### GNU `make`
+
+#### MacOS
+
+```
+brew install make
+```
+
+#### Debian-based
+
+```
+sudo apt install make
+```
+
+#### Fedora
+
+```
+sudo dnf install make
+```
+
+#### Arch-based
+
+```
+sudo pacman -Syu make
+```
+
+</details>
+
+### Optional Tools
+
+- GDB debugger
+- Rust analyzer
+- VirtualBox (for alternative testing)
+
+### Building
+
+To build the project 
